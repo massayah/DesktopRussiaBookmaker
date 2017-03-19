@@ -15,12 +15,11 @@ error_reporting(E_ALL);
 <meta http-equiv="X-UA-Compatible" content="IE=10">
 <meta name="viewport" content="initial-scale=1.0">
 
-<link href='http://fonts.googleapis.com/css?family=Exo+2:400,600' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="CSS/font-awesome.css" />
 <link rel="stylesheet" href="CSS/knacss-unminified.css" />
 <link rel="stylesheet" href="CSS/responsive-tabs.css" />
 <link rel="stylesheet" href="CSS/jquery-ui.css" media="all" />
 <link rel="stylesheet" href="CSS/style.css" />
-<link rel="stylesheet" href="CSS/theme.css" media="all" />
 
 	<!-- IE Fix for HTML5 Tags -->
 	<!--[if lt IE 9]>
@@ -59,8 +58,8 @@ error_reporting(E_ALL);
 <?php include("menu.php"); ?>
 <?php include("PHP/admin_functions.php"); ?>
 
-<div id="content">
-<div class="mw1140p center">
+<div id="content" class="pregrid">
+<div class="mw2000p">
 <!-- Message displayed if the user is not logged in or not an administrator -->
 <?php
 
@@ -91,9 +90,6 @@ else
 	else
 	{
 ?>
-
-
-
 
 
  <div id="update">
@@ -368,14 +364,9 @@ $defaultvalue->closeCursor();
 
 <!-- End Loop to display all potential qualified teams and choose the ones that will win in the group stage -->
 
-<p class="up"><a href="#container">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
-  <circle cx="30" cy="30" r="25" class="circle" />
-  <polyline points="20,35 30,25 40,35" class="arrow" />
-  </svg></a></p>
 
 <!-- Loop to display all users in a table and be able to delete them -->
-<div id="search_user"><label for="search_users">Recherche Utilisateur&nbsp;: </label><input id="search_users" ></div>
+<div id="search_user" class="mtl"><label for="search_users">Recherche Utilisateur&nbsp;: </label><input id="search_users" ></div>
 <table id="admin_users" class="striped alternate">
 <caption>
 <h2 class="h3-like">Utilisateurs</h2></caption>
@@ -415,13 +406,8 @@ $users->closeCursor();
 
 <!-- End Loop to display all users in a table and be able to delete them -->
 
-<p class="up"><a href="#container">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
-  <circle cx="30" cy="30" r="25" class="circle" />
-  <polyline points="20,35 30,25 40,35" class="arrow" />
-  </svg></a></p>
   
-   </div><!--end tab-4 -->
+   <!--</div>--><!--end tab-4 -->
    
 
 </div><!--end center-->

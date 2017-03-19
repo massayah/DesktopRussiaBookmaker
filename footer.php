@@ -1,5 +1,5 @@
-<div id=footer>
-<div class="center">
+<footer>
+<a href="#ancretop" title="retour haut de page"><p class="top"><span class="fa fa-angle-double-up fa-2x"></span></p></a>
 <p class="txtcenter">Site entièrement fait par Laurène et Martine  
 <?php
 if (isset($_SESSION['username']))
@@ -11,11 +11,10 @@ if (isset($_SESSION['username']))
 	{
 ?>
 
- - <a href="admin.php">Admin</a></p>
+ - <a href="admin.php">Admin</a>
 <?php
 }
 $isadmin->closeCursor();
 }
 ?>
-</div><!--end center-->
-</div><!--end footer-->
+</p></footer>

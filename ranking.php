@@ -11,7 +11,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=10">
 <meta name="viewport" content="initial-scale=1.0">
 
-<link href='http://fonts.googleapis.com/css?family=Exo+2:400,600' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="CSS/font-awesome.css" />
 <link rel="stylesheet" href="CSS/knacss-unminified.css" />
 <link rel="stylesheet" href="CSS/style.css" />
 
@@ -54,8 +54,8 @@ $(document).ready(function() {
 <body id="page_ranking">
 <?php include("header.php"); ?>
 <?php include("menu.php"); ?>
-<div id="content">
-<div class="mw1140p center mtl">
+<div id="content" class="pregrid">
+<div class="mw2000p mtl">
 <!-- Message displayed if the user is not logged in -->
 <?php
 if (!isset($_SESSION['username']))
@@ -72,7 +72,7 @@ else
 {
 
 ?>
-<div class="center">
+<div class="mtl">
 <!-- Display the rank only if the user is logged in and not an admin -->
 <?php
 if (isset($_SESSION['username']))
@@ -83,9 +83,10 @@ if (isset($_SESSION['username']))
 	if ($isadmindata['isadmin'] == 0)
 	{
 ?>
-<h1 class="h2-like">Vérifiez votre classement</h1>
-<p>Les points sont générés automatiquement. Si vous constatez des anomalies, <a href="contact.php">merci de nous contacter</a>.</p>
-<h2><?php echo $_SESSION['username']; ?></h2>
+<h1 class="h2-like txtcenter">Vérifiez votre classement</h1>
+<p class="txtcenter">Les points sont générés automatiquement.</p>
+<p class="txtcenter">Si vous constatez des anomalies, <a href="contact.php">merci de nous contacter</a>.</p>
+<h2 class="mtl ptl txtcenter"><?php echo $_SESSION['username']; ?></h2>
 <table id="my_rank" class="mtl">
 </table>
 <?php 
@@ -94,10 +95,10 @@ if (isset($_SESSION['username']))
 ?>
 <!-- End Display the rank only if the user is logged in and not an admin -->
 
-<div id="search_user"><label for="ranking_users">Rechercher un parieur&nbsp;:&nbsp;</label><input id="ranking_users" /></div>
+<div id="search_user"><label for="ranking_users">Rechercher un parieur inscrit&nbsp;:&nbsp;</label><input id="ranking_users" /></div>
 
 <!-- Display a ranking of all users based on the points they obtained when they got a bet right, there is also the display of the top 4 of all users -->
-<h2 class="mtl">Utilisateurs</h2>
+<h2 class="mtl">Parieurs inscrits</h2>
 <table id="rank_users" class="mtl">
 <thead>
 <tr>
@@ -148,12 +149,6 @@ $users->closeCursor();
 </table>
 
 <!-- End Display a ranking of all users based on the points they obtained when they got a bet right, there is also the display of the top 4 of all users -->
-
-<p class="up"><a href="#container">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
-  <circle cx="30" cy="30" r="25" class="circle" />
-  <polyline points="20,35 30,25 40,35" class="arrow" />
-  </svg></a></p>
   
 </div><!--end center-->
 </div><!--end content-->

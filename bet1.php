@@ -12,8 +12,8 @@
 <script src="javascript/teams.js"></script>
 <script src="javascript/search.js"></script>
 
-<div id="content">
-<div class="mw1140p center">
+<div id="content" class="pregrid">
+<div class="mw2000p">
 <!-- Message displayed if the user is not logged in -->
 <?php
 if (!isset($_SESSION['username']))
@@ -31,15 +31,17 @@ else
 {
 ?>
 
-<h1 class="ptl h2-like">Pariez sur les Matchs de Poule</h1>
-<div id="search_team" class="mtl mbl"><label for="info_team">Rechercher une équipe&nbsp;:&nbsp;</label><input id="info_team" /></div>
+<h1 class="ptl h2-like txtcenter">Pariez sur les Matchs de Poule</h1>
+<div id="search_team" class="mtl mbl txtcenter">
+<label for="info_team">Rechercher une équipe&nbsp;:&nbsp;</label><input id="info_team" />
+</div>
 
 <div class="panel mbl" id="datematch">
-<h2>Accès direct</h2>
+<h2 class="txtcenter ptl">Accès direct</h2>
 
-<div class="grid-3-small-1-tiny-1">
-<div>
-<p class="plm">1ers Matchs</p>
+<div class="grid-3-small-1 has-gutter">
+<div class="prl pbl pll">
+<p class="ptl plm">1ers Matchs</p>
 <p><a href="#June14">Jeudi 14 juin</a><br>
 <a href="#June15">Vendredi 15 juin</a><br>
 <a href="#June16">Samedi 16 juin</a><br>
@@ -47,16 +49,16 @@ else
 <a href="#June18">Lundi 18 juin</a><br>
 <a href="#June19">Mardi 19 juin</a></p>
 </div>
-<div>
-<p class="plm">2èmes Matchs</p>
+<div class="prl pbl pll">
+<p class="ptl plm">2èmes Matchs</p>
 <p> <a href="#June20">Mercredi 20 juin</a><br>
 <a href="#June21">Jeudi 21 juin</a><br>
 <a href="#June22">Vendredi 22 juin</a><br>
 <a href="#June23">Samedi 23 juin</a><br>
 <a href="#June24">Dimanche 24 juin</a></p>
 </div>
-<div>
-<p class="plm">3èmes Matchs</p>
+<div class="prl pbl pll">
+<p class="ptl plm">3èmes Matchs</p>
 <p> <a href="#June25">Lundi 25 juin</a><br>
 <a href="#June26">Mardi 26 juin</a><br>
 <a href="#June27">Mercredi 27 juin</a><br>
@@ -66,7 +68,7 @@ else
 </div><!--end grid-3-->
 </div><!--end Panel-->
 
-<div class="panel mbl">
+<div class="panel pal mbl">
 <p>Pour vous aider à parier, consultez le <a href="http://fr.fifa.com/fifa-world-ranking/ranking-table/men/index.html">classement mondial FIFA des équipes, à jour au 2 juin 2018</a></p>
 </div><!--end Panel-->
 
@@ -76,7 +78,7 @@ FROM russia_schedule es JOIN russia_team t1 ON team1 = t1.id
 JOIN russia_team t2 ON t2.id = team2 WHERE DATE(date) LIKE CURDATE()');
 if ($daymatch->rowCount() > 0)
 {
-	echo "<div class=\"panel mbl\" id=\"daymatch\">
+	echo "<div class=\"panel pal mbl\" id=\"daymatch\">
 <h2>Les paris du jour</h2>";
 while ($daymatchdata = $daymatch->fetch())
 {
@@ -92,7 +94,7 @@ FROM russia_schedule es JOIN russia_team t1 ON team1 = t1.id
 JOIN russia_team t2 ON t2.id = team2 WHERE DATE(date) LIKE CURDATE()');
 if ($daymatch->rowCount() > 0)
 {
-	echo "<div class=\"panel mbl\" id=\"daymatch\">
+	echo "<div class=\"panel pal mbl\" id=\"daymatch\">
 <h2>Les paris du jour</h2>";
 while ($daymatchdata = $daymatch->fetch())
 {
@@ -103,7 +105,7 @@ echo "</div>";
 ?>
 
 <!-- Loop to display all matches in chronological order with a select element to select the potential winning team -->
-<div class="grid-2-small-1-tiny-1" id="mainblock">
+<div class="grid-2-small-1 has-gutter" id="mainblock">
 <?php
 $bets = $bdd->prepare('SELECT t1.name AS tn1, t2.name AS tn2, t1.flag AS tf1, t2.flag as tf2, es.id as sid, team1result, team2result, es.group, available, 
 MONTHNAME(date) as month, DAY(date) as day, HOUR(date) as hour, MINUTE(date) as minute, win, available, t1.previous as previous1, t2.previous as previous2, 
@@ -137,9 +139,9 @@ $hasplayed = $teamresult1 != NULL && $teamresult2 != NULL;
 	echo $betsdata['minute']; ?> - <span class="couleur">Groupe <?php echo $betsdata['group'];?></span></p>
 <div class="panel txtcenter">
 <p class="ptl pbl"><img src="<?php echo $betsdata['tf1'];?>" alt="<?php echo $team1; ?>" width="50" height="50"> 
-<span class="h4-like medium-hidden small-hidden tiny-hidden mls mrs"><strong><?php echo $team1; ?></strong></span>
-<span class="h4-like large-hidden mls mrs"><strong><?php echo $betsdata['smallname1']; ?></strong></span> vs <span class="h4-like medium-hidden small-hidden tiny-hidden mls mrs"><strong><?php echo $team2; ?></strong></span>
-<span class="h4-like large-hidden mls mrs"><strong><?php echo $betsdata['smallname2']; ?></strong></span> <img src="<?php echo $betsdata['tf2'];?>" alt="<?php echo $team2; ?>" width="50" height="50">
+<span class="h4-like small-hidden tiny-hidden mls mrs"><strong><?php echo $team1; ?></strong></span>
+<span class="h4-like large-hidden medium-hidden mls mrs"><strong><?php echo $betsdata['smallname1']; ?></strong></span> vs <span class="h4-like small-hidden tiny-hidden mls mrs"><strong><?php echo $team2; ?></strong></span>
+<span class="h4-like large-hidden medium-hidden mls mrs"><strong><?php echo $betsdata['smallname2']; ?></strong></span> <img src="<?php echo $betsdata['tf2'];?>" alt="<?php echo $team2; ?>" width="50" height="50">
 </p>
 <p class="txtcenter h5-like mtn"><strong>
 <?php
@@ -175,10 +177,10 @@ setLightbox($team2, $betsdata['previous2'], $betsdata['smallname2'], $betsdata['
 		</div>-->
 		<!-- End Setting the lightbox for each team available if we click on the name of the team -->
 
-<div class="grid-2-small-1-tiny-1 ptl">
+<div class="grid-2-small-1">
 <div>
 <form id="bet<?php echo $id; ?>" action="bet1.php#bet<?php echo $id; ?>" method="POST" class="border-bet-form">
-<ul class="unstyled pln bet-choix txtleft">
+<ul class="unstyled pls pts bet-choix txtleft">
 			<li><label for="<?php echo $team1; ?>"><input type="radio" value="<?php echo $betsdata['idt1']; ?>" name="select_bet<?php echo $id; ?>">&nbsp;<?php echo $team1; ?></label></li>
 			<li><label for="<?php echo $team2; ?>"><input type="radio" value="<?php echo $betsdata['idt2']; ?>" name="select_bet<?php echo $id; ?>">&nbsp;<?php echo $team2; ?></label></li>
 			<li><label for="Nul"><input type="radio" name="select_bet<?php echo $id; ?>" value="<?php echo 25;?>">&nbsp;Nul</label></li>
@@ -242,17 +244,11 @@ else
 </div>
 </div><!--end grid-2-->
 </div><!--end panel-->
-</div><!--end poule ang esp-->
+</div><!--end poule-->
 <?php
 }
 ?>
 <!--</div>--><!--end grid-2-->
-
-<p class="up"><a href="#container">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
-  <circle cx="30" cy="30" r="25" class="circle" />
-  <polyline points="20,35 30,25 40,35" class="arrow" />
-  </svg></a></p>
 
 </div><!--end center-->
 </div><!--end content-->

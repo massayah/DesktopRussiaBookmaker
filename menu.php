@@ -4,7 +4,8 @@
         $array_menu_content = array( "Accueil", "Top 4", "Poules", "Finales", "Points", "Contact", "Discussion" );
         
         $info = pathinfo($_SERVER['PHP_SELF']);
-        echo "\n<div id=\"menu\" class=\"mw1140p center\">\n<nav id=\"navigation\" role=\"navigation\">\n";
+        echo "\n<div id=\"menu\" class=\"mw2000p pregrid\">\n<nav id=\"navigation\" role=\"navigation\">\n<input type=\"checkbox\" id=\"toggle-nav\" aria-label=\"open/close navigation\">
+  <label for=\"toggle-nav\" class=\"nav-button\"></label>\n<div class=\"nav-inner\">";
         foreach($array_menu_link as $key=>$link)
         {
             echo "<a class=\"";
@@ -14,6 +15,6 @@
             echo "\" href=\"" . $link . "\">" . $array_menu_content[$key] . "</a>\n";
         }
         
-        echo "</nav>\n</div>";
+        echo "</div>\n</nav>\n</div>";
 ?>
 <!-- End Using PHP to display the menu and show the page the user is currently in with CSS -->

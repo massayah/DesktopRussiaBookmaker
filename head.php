@@ -9,6 +9,7 @@
 
 <meta http-equiv="X-UA-Compatible" content="IE=10">
 <meta name="viewport" content="initial-scale=1.0">
+<link rel="stylesheet" href="CSS/font-awesome.css" />
 <link rel="stylesheet" href="CSS/knacss-unminified.css" />
 <link rel="stylesheet" href="CSS/style.css" />
 
