@@ -2,7 +2,11 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 ?> 
-<?php include('PHP/login.php'); ?>
+<?php 
+ob_start();
+include('PHP/login.php'); 
+ob_end_flush();
+?>
 <!doctype html>
 <!--[if lte IE 6]> <html class="no-js ie6 ie67 ie678" lang="fr"> <![endif]-->
 <!--[if lte IE 7]> <html class="no-js ie7 ie67 ie678" lang="fr"> <![endif]-->

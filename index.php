@@ -11,49 +11,48 @@
 <div class="grid-2-small-1 has-gutter-xl">
 
 <div class="pal">
-<h2 class="h4-like ptl">En route pour la coupe du monde en Russie.</h2>
+<h2 class="ptl">En route pour la coupe du monde en Russie.</h2>
 <p>La compétition se déroulera du 14 juin au 15 juillet 2018.</p>
 <p>32 équipes - 1 champion</p>
-<p><a href="bet1.php">Pariez sur chaque match</a></p>
-<p><a href="top.php">Faites&nbsp;votre&nbsp;Top&nbsp;4</a></p>
+<p><a href="bet1.php">Pariez sur chaque match</a> (accès réservé aux inscrits)</p>
+<p><a href="top.php">Faites&nbsp;votre&nbsp;Top&nbsp;4</a> (accès réservé aux inscrits)</p>
 <p>et Gagnez des cadeaux.</p>
 </div>
 <div class="pal">
-<h2 class="h4-like ptl">Pendant les matchs, venez discuter sur la plate-forme <a href="http://assayah.com/Discussion">Discussion</a></h2>
-<p>C'est un réseau privé que j'ai installé dans mon hébergement tout comme le site lui-même, donc pas de problème de confidentialité.</p>
-<p>Au moment des matchs, il y aura toujours quelqu'un avec qui discuter, si ce n'est une grosse affluence pour les matchs à enjeu.</p>
-<p>On peut s'en servir avec une tablette ou un smartphone, très pratiques pour discuter lorsqu'on regarde un match.</p>
+<video src="images/Madenian.mp4" controls>
+
+    Votre navigateur n'est pas compatible avec le HTML 5, désolé.
+
+</video>
 </div>
 </div><!--end grid-->
 </div><!--end intro-->
 
-<div class="register panel">
-<h2 class="pal">1. Je m'inscris</h2>
-<div class="grid-2-small-1 has-gutter-xl">
-<div class="inscription pal">
-<h3 class="mtl">Identifiant</h3>
+<div class="discussion panel pal">
+<h2>Pendant les matchs, venez découvrir la plate-forme <a href="http://assayah.com/Discussion">Discussion</a></h2>
+<p><strong>En lecture seule</strong>, avant, pendant et après les matchs, vous y trouverez les <strong>réflexions en direct</strong> des membres inscrits. J'y ajoute, en copier-coller, les meilleurs <strong>tweets</strong> et les meilleures <strong>blagues</strong> de supporters et journalistes qui suivent l'évènement.</p>
+<p><strong>Ou mieux : participez !</strong> en vous inscrivant, vous pourrez donner votre avis, et + si affinités.</p>
+<p>C'est un réseau privé que j'ai installé dans mon hébergement tout comme le site lui-même, donc pas de problème de confidentialité.</p>
+<p>Au moment des matchs, il y aura toujours quelqu'un avec qui discuter, si ce n'est une grosse affluence pour les matchs à enjeu.</p>
+<p>On peut s'en servir avec une tablette ou un smartphone, très pratiques pour discuter lorsqu'on regarde un match.</p>
+</div><!--end discussion-->
+
+<div class="register panel pal">
+<h2>1. Je m'inscris</h2>
+<h3>Identifiant</h3>
 <p>Choisissez&nbsp;:</p>
 <ul>
-<li>soit un pseudo que Laurène ou Martine puissent reconnaître FACILEMENT + l'initiale de votre nom<br>
-ex. cricriF, chrisG, jpP, jpV</li>
-<li>soit votre prénom + initiale de votre nom<br>
-ex. ZezetteX</li>
+<li>soit un pseudo que Laurène ou Martine puissent reconnaître FACILEMENT + l'initiale de votre nom. <strong>Exemples&nbsp;</strong>: cricriF, chrisG, jpP, jpV</li>
+<li>soit votre prénom + initiale de votre nom. <strong>Exemple&nbsp;</strong>: ZezetteX</li>
 </ul>
 <h3 class="mtl">Mot de passe</h3>
-<p>Choisissez un mot de passe facile à retenir.</p>
+<p>Choisissez un mot de passe <strong>facile à retenir</strong>.</p>
 <p class="ptl"><a class="btn-rouge" href="register.php">Je m'inscris</a></p>
 <p>Une fois inscrit, vous aurez accès aux pages qui permettent de parier.</p>
-</div><!--end inscription--> 
-
-<div class="connexion pal">
-<h3 class="h2-like">Visites suivantes</h3>
-<p>Connectez-vous avec votre identifiant et votre mot de passe.</p>
-<h4 class=" h3-like mtl">Oubli de mot de passe</h4>
-<p>ne créez pas plein de comptes, ça ne sert à rien.<br />
-<a href="contact.php">Contactez-nous</a><br />
-nous vous donnerons votre mot de passe.</p>
-</div><!--end connexion--> 
-</div><!--end grid-2--> 
+<h3 class="mtl">Oubli de mot de passe</h3>
+<p>ne créez pas plein de comptes, ça ne sert à rien. <a href="contact.php">Contactez-nous</a> nous vous donnerons votre mot de passe.</p>
+<h3>Visites suivantes</h3>
+<p>Connectez-vous avec votre identifiant et votre mot de passe.</p>  
 </div><!--end register-->
 
 <div class="grid-2-small-1 has-gutter-xl">

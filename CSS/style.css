@@ -321,8 +321,8 @@ body {background: url(../images/greyzz.png)}
 
 
 header {
-  background-color: #206cac;
   background-color: #debe82;
+  background-color: #ceab70;
   margin: 0 0 30px 0;
 }
 
@@ -353,7 +353,7 @@ header {
 }
 
 @media (min-width:1024px) {
-  header {background: url(../images/bgEuroDoreclair.png)}
+  header {background: url(../images/bgRussia.png)}
   header img.logo-600-1023 {display: none;} 
 }
 
@@ -760,7 +760,7 @@ margin-top: 1em;
 }
 
 
-#intro {margin-bottom: 5em;}
+#intro, .discussion {margin-bottom: 5em;}
 
 
 #rules li {margin-top: 10px; margin-bottom: 10px;}
@@ -830,6 +830,16 @@ margin-top: 1em;
 #page_top .grpes img {
   margin-right: 1em;
   margin-bottom: 5px;
+}
+
+#page_top .grpes h3 {
+width: 2em;
+height: 2em;
+line-height: 2em;
+background-color: #027ac2;
+color: #fff;
+border-radius: 50%;
+text-align: center;
 }
 
 
