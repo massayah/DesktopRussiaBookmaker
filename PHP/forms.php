@@ -1,4 +1,5 @@
 <?php
+
 // script in order to avoid a repetitive window if we refresh the page after filling a form
 session_start();
 
@@ -14,9 +15,8 @@ if(!empty($_POST) OR !empty($_FILES))
     }
     
     header('Location: ' . $currentfile);
-    exit;
+    //exit;
 }
-
 if(isset($_SESSION['save']))
 {
     $_POST = $_SESSION['save'] ;
@@ -24,5 +24,4 @@ if(isset($_SESSION['save']))
     
     unset($_SESSION['save'], $_SESSION['saveFILES']);
 }
-
 ?>

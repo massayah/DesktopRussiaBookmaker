@@ -1,11 +1,5 @@
-<?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-?> 
-<?php 
-ob_start();
+ <?php 
 include('PHP/login.php'); 
-ob_end_flush();
 ?>
 <!doctype html>
 <!--[if lte IE 6]> <html class="no-js ie6 ie67 ie678" lang="fr"> <![endif]-->

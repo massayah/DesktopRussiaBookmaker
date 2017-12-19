@@ -1,8 +1,4 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-?> 
-<?php
 // Testing if the user clicked on the submit button
 if (isset($_POST['register'])) { 
    // Testing if the variables exist and are not empty
