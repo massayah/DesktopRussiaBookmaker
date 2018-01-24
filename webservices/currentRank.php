@@ -29,7 +29,7 @@ while ($userdata = $users->fetch())
 			if ($i == 1)
 				$rank = $i . "er";
 			else
-				$rank = utf8_encode ( $i . "ème");
+				$rank =  $i . "ème";
 	}
 
 	$user = array(	'user' => $userdata['username'],

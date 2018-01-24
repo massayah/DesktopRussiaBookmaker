@@ -2,7 +2,13 @@
 include('database_access.php');
 $jsonresponse = array();
 
-$users = $bdd->prepare('SELECT russia_user.username, points FROM russia_user WHERE russia_user.isadmin = 0 ORDER BY points DESC, username ASC');
+$users = $bdd->prepare('SELECT ru.username as username, ru.points, rt1.smallname as team1, rt1.flag as flag1, rt2.smallname as team2, rt2.flag as flag2, rt3.smallname as team3, rt3.flag as flag3, rt4.smallname as team4, rt4.flag as flag4 FROM russia_user as ru  
+LEFT OUTER JOIN russia_top as rt ON ru.username = rt.username 
+LEFT OUTER JOIN russia_team as rt1 ON rt1.name = rt.team1 
+LEFT OUTER JOIN russia_team as rt2 ON rt2.name = rt.team2 
+LEFT OUTER JOIN russia_team as rt3 ON rt3.name = rt.team3
+LEFT OUTER JOIN russia_team as rt4 ON rt4.name = rt.team4
+WHERE ru.isadmin = 0 ORDER BY ru.points DESC, username ASC');
 $users->execute(array());
 $i = 1;
 $j = 1;
@@ -12,7 +18,7 @@ while ($userdata = $users->fetch())
 	//if ($userdata['points'] == $prev_points)
 	if ($i == 1)
 	{
-		$rank = $i . "er";
+		$rank = $i ;//. "er";
 		$prev_points = $userdata['points'];
 	}
 	else
@@ -26,15 +32,24 @@ while ($userdata = $users->fetch())
 			$i = $j;
 			$prev_points = $userdata['points'];
 		}
-			if ($i == 1)
+			/*if ($i == 1)
 				$rank = $i . "er";
 			else
-				$rank = utf8_encode ( $i . "ème");
+				$rank = utf8_encode ( $i . "ème");*/
+				$rank = $i;
 	}
 
 	$user = array(	'user' => $userdata['username'],
 					'points' => $userdata['points'],
-					'rank' => $rank);
+					'rank' => $rank,
+					'team1' => array('name' => $userdata['team1'],
+									 'flag' => $userdata['flag1']),
+					'team2' => array('name' => $userdata['team2'],
+									 'flag' => $userdata['flag2']),
+					'team3' => array('name' => $userdata['team3'],
+									 'flag' => $userdata['flag3']),
+					'team4' => array('name' => $userdata['team4'],
+									 'flag' => $userdata['flag4']));
 	array_push($jsonresponse, $user);
 		$i++;
 		$j++;
