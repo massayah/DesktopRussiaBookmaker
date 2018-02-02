@@ -47,13 +47,13 @@ else
 
 $teams = $bdd->prepare('SELECT team1, team2, rs.group as groupe, rs.id, rs.date, team1result, team2result, available, rt1.name as name1, rt2.name as name2,
 rt1.flag as flag1, rt2.flag as flag2 FROM russia_schedule rs JOIN russia_team rt1 ON rs.team1 = rt1.id JOIN russia_team rt2 ON rs.team2 = rt2.id WHERE rs.id BETWEEN ? AND ?');*/
-$teams = $bdd->prepare('SELECT team1, team2, rs.group as groupe, rs.id, rs.date, rs.overtime, team1result, team2result, available, rt1.name as name1, rt2.name as name2,
-rt1.flag as flag1, rt2.flag as flag2, tempname1, tempname2, rt1.id as team1id, rt2.id as team2id FROM russia_schedule rs LEFT OUTER JOIN russia_team rt1 ON rs.team1 = rt1.id LEFT OUTER JOIN russia_team rt2 ON rs.team2 = rt2.id LEFT OUTER JOIN russia_namematch rn ON rn.id_match = rs.id ORDER BY rs.id');
+$teams = $bdd->prepare('SELECT team1, team2, rt1.smallname as team1smallname, rt2.smallname as team2smallname, rs.group as groupe, rs.id, rs.date, rs.overtime, team1result, team2result, available, rt1.name as name1, rt2.name as name2, team1penalty, team2penalty, 
+rt1.flag_mobile as flag1, rt2.flag_mobile as flag2, tempname1, tempname2, rt1.id as team1id, rt2.id as team2id FROM russia_schedule rs LEFT OUTER JOIN russia_team rt1 ON rs.team1 = rt1.id LEFT OUTER JOIN russia_team rt2 ON rs.team2 = rt2.id LEFT OUTER JOIN russia_namematch rn ON rn.id_match = rs.id ORDER BY rs.id');
 }
 else
 {
-	$teams = $bdd->prepare('SELECT team1, team2, rs.group as groupe, rs.id, rs.date, rs.overtime, team1result, team2result, available, rt1.name as name1, rt2.name as name2,
-rt1.flag as flag1, rt2.flag as flag2, tempname1, tempname2, rt1.id as team1id, rt2.id as team2id FROM russia_schedule rs LEFT OUTER JOIN russia_team rt1 ON rs.team1 = rt1.id LEFT OUTER JOIN russia_team rt2 ON rs.team2 = rt2.id LEFT OUTER JOIN russia_namematch rn ON rn.id_match = rs.id WHERE DATE(rs.date) = DATE(NOW()) ORDER BY rs.id');
+	$teams = $bdd->prepare('SELECT team1, team2, rt1.smallname as team1smallname, rt2.smallname as team2smallname, rs.group as groupe, rs.id, rs.date, rs.overtime, team1result, team2result, available, rt1.name as name1, rt2.name as name2, team1penalty, team2penalty,
+rt1.flag_mobile as flag1, rt2.flag_mobile as flag2, tempname1, tempname2, rt1.id as team1id, rt2.id as team2id FROM russia_schedule rs LEFT OUTER JOIN russia_team rt1 ON rs.team1 = rt1.id LEFT OUTER JOIN russia_team rt2 ON rs.team2 = rt2.id LEFT OUTER JOIN russia_namematch rn ON rn.id_match = rs.id WHERE DATE(rs.date) = DATE(NOW()) ORDER BY rs.id');
 }
 $teams->execute(array());
 
@@ -74,20 +74,26 @@ while ($teamsdata = $teams->fetch())
 				$win = $bet2data['name'];
 			}
 		}
-		$response = array('team1' => $teamsdata['name1'] != NULL ? $teamsdata['name1'] : $teamsdata['tempname1'],
-					'team2' => $teamsdata['name2'] != NULL ? $teamsdata['name2'] : $teamsdata['tempname2'],
+
+		$response = array('team1' => array(name => $teamsdata['name1'] != NULL ? $teamsdata['name1'] : $teamsdata['tempname1'],
+										   smallname => $teamsdata['team1smallname'] != NULL ? $teamsdata['team1smallname'] : $teamsdata['tempname1'],
+										   flag => $teamsdata['flag1'],
+										   id => $teamsdata['team1id']),
+						  'team2' => array(name => $teamsdata['name2'] != NULL ? $teamsdata['name2'] : $teamsdata['tempname2'],
+						  				   smallname => $teamsdata['team2smallname'] != NULL ? $teamsdata['team2smallname'] : $teamsdata['tempname2'],
+										   flag => $teamsdata['flag2'],
+										   id => $teamsdata['team2id']),
 					'group' => $teamsdata['groupe'],
-					'team1Id' => $teamsdata['team1id'],
-					'team2Id' => $teamsdata['team2id'],
 					'resultBet' => $bet->rowCount() > 0 ? $win : NULL,
 					'id' => $teamsdata['id'],
 					'matchTime' => str_replace(" ", "T", $teamsdata['date'] . 'Z'),
 					'dateServeur' => str_replace(" ", "T", date("Y-m-d H:i:s")) . 'Z',
 					'resultTeam1' => $teamsdata['team1result'],
 					'resultTeam2' => $teamsdata['team2result'],
-					'flag1' => $teamsdata['flag1'],
-					'flag2' => $teamsdata['flag2'],
-					'prolongations' => $teamsdata['overtime']
+					'prolongations' => $teamsdata['overtime'],
+					'resultTeam1Penalties' => $teamsdata['team1penalty'],
+					'resultTeam2Penalties' => $teamsdata['team2penalty'],
+					'available' => $teamsdata['available']
 		);
 	array_push($jsonresponse, $response);
 }

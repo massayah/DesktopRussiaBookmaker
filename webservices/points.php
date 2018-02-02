@@ -2,7 +2,7 @@
 include('database_access.php');
 $jsonresponse = array();
 
-$users = $bdd->prepare('SELECT ru.username as username, ru.points, rt1.smallname as team1, rt1.flag as flag1, rt2.smallname as team2, rt2.flag as flag2, rt3.smallname as team3, rt3.flag as flag3, rt4.smallname as team4, rt4.flag as flag4 FROM russia_user as ru  
+$users = $bdd->prepare('SELECT ru.username as username, ru.points, rt1.smallname as team1, rt1.flag_mobile as flag1, rt2.smallname as team2, rt2.flag_mobile as flag2, rt3.smallname as team3, rt3.flag_mobile as flag3, rt4.smallname as team4, rt4.flag_mobile as flag4 FROM russia_user as ru  
 LEFT OUTER JOIN russia_top as rt ON ru.username = rt.username 
 LEFT OUTER JOIN russia_team as rt1 ON rt1.name = rt.team1 
 LEFT OUTER JOIN russia_team as rt2 ON rt2.name = rt.team2 
@@ -42,13 +42,13 @@ while ($userdata = $users->fetch())
 	$user = array(	'user' => $userdata['username'],
 					'points' => $userdata['points'],
 					'rank' => $rank,
-					'team1' => array('name' => $userdata['team1'],
+					'team1' => array('smallname' => $userdata['team1'],
 									 'flag' => $userdata['flag1']),
-					'team2' => array('name' => $userdata['team2'],
+					'team2' => array('smallname' => $userdata['team2'],
 									 'flag' => $userdata['flag2']),
-					'team3' => array('name' => $userdata['team3'],
+					'team3' => array('smallname' => $userdata['team3'],
 									 'flag' => $userdata['flag3']),
-					'team4' => array('name' => $userdata['team4'],
+					'team4' => array('smallname' => $userdata['team4'],
 									 'flag' => $userdata['flag4']));
 	array_push($jsonresponse, $user);
 		$i++;
