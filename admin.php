@@ -1,4 +1,4 @@
- <?php 
+<?php
 include('PHP/login.php'); 
 ?>
 <!doctype html>

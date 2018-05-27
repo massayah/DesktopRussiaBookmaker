@@ -51,8 +51,8 @@ function setLightbox($name, $previous, $smallname, $starplayer, $coach)
 	echo "<div style=\"display: none;\" class=\"hidelightbox\">
 		  <div id=\"lb_" . $formatlightbox . "\" class=\"lbstyle\">
 		  <h2 class=\"h3-like\">" . $name . "</h2>
-			<h3 class=\"h4-like mbn\">Palmarès Euro 2012</h3>" . $previous . "
-			<h3 class=\"h4-like mbn\">Entraîneur</h3>" .  $coach . "
+			<h3 class=\"h4-like mbn\">Palmarès<br>Mondial 2014 - Euro 2016</h3>" . $previous . "
+			<h3 class=\"h4-like mbn\">Sélectionneur</h3>" .  $coach . "
 			<h3 class=\"h4-like mbn\">Joueur Star</h3>" . $starplayer . "
 			
 		</div>

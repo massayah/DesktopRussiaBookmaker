@@ -17,14 +17,14 @@ while ($data = $result->fetch())
 		<tr>
 		<th><img src="<?php echo $data['flag'];?>" alt="<?php echo $data['name'];?>" width="48" height="48"></th>
 		<td><a id="lightbox_<?php echo str_replace(" ", "", strtolower($data['name']));?>" href="#lb_<?php echo str_replace(" ", "", strtolower($data['name']));?>">
-		Infos Equipe</a>
+		Infos Team</a>
 		
 		<!-- Setting the lightbox for each team available if we click on the name of the team -->
 		<div style="display: none;">
 		<div id="lb_<?php echo str_replace(" ", "", strtolower($data['name']));?>" class="lbstyle">
 		<h2 class="h3-like"><?php echo $data['name']; ?></h2>
 			
-			<p><strong>Palmarès Euro 2012 : </strong><?php echo $data['previous']; ?></p>
+			<p><strong>Palmarès Mondial 2014 - Euro 2016 : </strong><?php echo $data['previous']; ?></p>
 			<p><strong>Sélectionneur : </strong><?php echo $data['coach']; ?></p>
 			<p><strong>Joueur Star : </strong><?php echo $data['starplayer']; ?></p>
 			

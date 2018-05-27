@@ -11,7 +11,7 @@ $(document).ready(function() {
 				'transitionOut'		: 'none'
 			});
 
-				$(".lightbox_zam").fancybox({
+				$(".lightbox_asa").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
@@ -35,13 +35,13 @@ $(document).ready(function() {
 				'transitionOut'		: 'none'
 			});
 
-				$(".lightbox_pga").fancybox({
+				$(".lightbox_mar").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
 
-				$(".lightbox_gab").fancybox({
+				$(".lightbox_egy").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
@@ -53,7 +53,7 @@ $(document).ready(function() {
 				'transitionOut'		: 'none'
 			});
 
-				$(".lightbox_equ").fancybox({
+				$(".lightbox_per").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
@@ -77,13 +77,13 @@ $(document).ready(function() {
 				'transitionOut'		: 'none'
 			});
 
-				$(".lightbox_usa").fancybox({
+				$(".lightbox_dan").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
 
-				$(".lightbox_tun").fancybox({
+				$(".lightbox_nig").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
@@ -100,7 +100,7 @@ $(document).ready(function() {
 				'transitionOut'		: 'none'
 			});
 
-				$(".lightbox_ita").fancybox({
+				$(".lightbox_srb").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
@@ -112,7 +112,7 @@ $(document).ready(function() {
 				'transitionOut'		: 'none'
 			});
 
-				$(".lightbox_gha").fancybox({
+				$(".lightbox_bre").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
@@ -141,7 +141,7 @@ $(document).ready(function() {
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
-                                $(".lightbox_pba").fancybox({
+                                $(".lightbox_sue").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
@@ -151,12 +151,12 @@ $(document).ready(function() {
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
-                                $(".lightbox_chi").fancybox({
+                                $(".lightbox_pan").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
-                                $(".lightbox_trt").fancybox({
+                                $(".lightbox_tun").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
@@ -166,7 +166,7 @@ $(document).ready(function() {
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'
 			});
-                                $(".lightbox_cos").fancybox({
+                                $(".lightbox_crc").fancybox({
 				'titlePosition'		: 'inside',
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none'

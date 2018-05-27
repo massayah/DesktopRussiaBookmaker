@@ -28,13 +28,35 @@
 </div><!--end grid-->
 </div><!--end intro-->
 
-<div class="discussion panel pal">
-<h2>Pendant les matchs, venez découvrir la plate-forme <a href="http://assayah.com/Discussion">Discussion</a></h2>
+<div class="grid-2-small-1 has-gutter-xl discussion panel">
+<div class="pal">
+<h2>Venez découvrir la plate-forme <a href="http://assayah.com/Discussion">Discussion</a></h2>
 <p><strong>En lecture seule</strong>, avant, pendant et après les matchs, vous y trouverez les <strong>réflexions en direct</strong> des membres inscrits. J'y ajoute, en copier-coller, les meilleurs <strong>tweets</strong> et les meilleures <strong>blagues</strong> de supporters et journalistes qui suivent l'évènement.</p>
 <p><strong>Ou mieux : participez !</strong> en vous inscrivant, vous pourrez donner votre avis, et + si affinités.</p>
 <p>C'est un réseau privé que j'ai installé dans mon hébergement tout comme le site lui-même, donc pas de problème de confidentialité.</p>
 <p>Au moment des matchs, il y aura toujours quelqu'un avec qui discuter, si ce n'est une grosse affluence pour les matchs à enjeu.</p>
 <p>On peut s'en servir avec une tablette ou un smartphone, très pratiques pour discuter lorsqu'on regarde un match.</p>
+</div>
+<div class="pal">
+<h2>Lu sur <a href="http://assayah.com/Discussion">Discussion</a> à l'Euro 2016</h2>
+<p>Equipe d’Angleterre @ Pays de Galles&nbsp;: "ça vous dit pas d’avoir qu’une seule équipe pour la Grande Bretagne comme aux JO, histoire qu’on soit un peu moins ridicules?"<br />
+L'équipe du pays de Galles ne voit pas l’intérêt de diminuer le niveau de son équipe.</p>
+<p class="txtcenter">...</p>
+<p>Les hommes du match France-Allemagne&nbsp;:</p>
+<ol>
+<li>l'arbitre</li>
+<li>Hugo Lloris</li>
+<li>Antoine Griezmann</li>
+</ol>
+<p class="txtcenter">...</p>
+<p>Il faut savoir qu’avec la chaleur qu’il fait actuellement à Marseille, l’espérance de vie d’un allemand en extérieur est de 28 secondes.</p>
+<p class="txtcenter">...</p>
+<p>Si on lit sur les lèvres de l’arbitre au moment du peno, il dit « Pour toi, Gigi Buffon »</p>
+<p class="txtcenter">...</p>
+<p>"Formidable cette joie des supporters français qui continuent de klaxonner ce matin en criant de bouger ton cul c’est vert connard."</p>
+<p class="txtcenter">...</p>
+<p>France 98 @ Equipe de France : « Au fond en 18 ans les choses n’ont pas changé, pour gagner la finale vous devez juste arrêter Ronaldo »</p>
+</div>
 </div><!--end discussion-->
 
 <div class="register panel pal">
@@ -90,9 +112,9 @@
 
 <h2 class="mtl">Liens utiles</h2>
 <ul class="unstyled pln">
-<li>Tableau des matchs : <a href="#">site FIFA</a></li>
-<li>Tout savoir sur les équipes : <a href="#">site FIFA</a></li>
-<li>Le classement FIFA des équipes au 2 juin 2018 : <a href="http://fr.fifa.com/fifa-world-ranking/ranking-table/men/index.html">site FIFA</a></li>
+<li>Tableau des matchs : <a href="http://fr.fifa.com/worldcup/matches/index.html">site FIFA</a></li>
+<li>Tout savoir sur les équipes : <a href="http://fr.fifa.com/worldcup/teams/index.html">site FIFA</a></li>
+<li>Le classement FIFA des équipes mis à jour régulièrement : <a href="http://fr.fifa.com/fifa-world-ranking/ranking-table/men/index.html">site FIFA</a></li>
 </ul>
 
 <h2 class="mtl">Bonne chance à tous !</h2>
