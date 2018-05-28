@@ -183,7 +183,7 @@ setLightbox($team2, $betsdata['previous2'], $betsdata['smallname2'], $betsdata['
 <ul class="unstyled pls pts bet-choix txtleft">
 			<li><label for="<?php echo $team1; ?>"><input type="radio" value="<?php echo $betsdata['idt1']; ?>" name="select_bet<?php echo $id; ?>">&nbsp;<?php echo $team1; ?></label></li>
 			<li><label for="<?php echo $team2; ?>"><input type="radio" value="<?php echo $betsdata['idt2']; ?>" name="select_bet<?php echo $id; ?>">&nbsp;<?php echo $team2; ?></label></li>
-			<li><label for="Nul"><input type="radio" name="select_bet<?php echo $id; ?>" value="<?php echo 25;?>">&nbsp;Nul</label></li>
+			<li><label for="Nul"><input type="radio" name="select_bet<?php echo $id; ?>" value="<?php echo 33;?>">&nbsp;Nul</label></li>
 			<?php
 				if ($betsdata['available'] == "1") {
 			?>
@@ -198,7 +198,7 @@ setLightbox($team2, $betsdata['previous2'], $betsdata['smallname2'], $betsdata['
 <p class="couleur mtn"><?php 
 if ($betsdata['win'] != "")
 	{
-		if ($betsdata['win'] == 25)
+		if ($betsdata['win'] == 33)
 			echo "Nul";
 		else {
 		$chosenbet = $bdd->prepare('SELECT name FROM russia_team WHERE id = ?');
@@ -229,7 +229,7 @@ if ($teamresult1 != NULL && $teamresult2 != NULL)
 				
 		}
 		else
-			$winningteam = 25;
+			$winningteam = 33;
 	}
 	if ($winningteam == $betsdata['win'])
 		echo "<p class=\"couleur mtn\">Gagné</p>";
